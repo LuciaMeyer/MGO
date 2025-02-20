@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import img from "../../../public/img/logo_mgo.svg";
+import img from "../../../public/img/logo_mgo.png";
 
 export default function SloganSection() {
 

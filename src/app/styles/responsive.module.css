@@ -13,6 +13,9 @@
 /* Tablet Screen */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   /* Header Sticky */
+  .slider .s3 {
+    background-position: -50rem;
+  }
   .section {
     padding: 70px 0px;
   }
@@ -382,7 +385,8 @@
 }
 /* Mobile Screen */
 @media only screen and (max-width: 767px) {
-  .header.sticky {
+  .slider .s3 {
+    background-position: -50rem;
   }
   .slider .single-slider p {
     width: 80%;
@@ -582,9 +586,6 @@
   .header .top-contact {
     float: none;
     text-align: center;
-  }
-  .slider .single-slider {
-    height: 380px;
   }
   .schedule {
     background: #fff;
@@ -1048,6 +1049,9 @@
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
+  .slider .s3 {
+    background-position: -50rem;
+  }
   .section {
     padding: 50px 0px;
   }
@@ -1108,13 +1112,16 @@
     opacity: 0.5;
   }
   .slider .single-slider h1 {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 600;
-    line-height: 25px;
+    line-height: 35px;
+    padding-right: 1rem;
   }
   .slider .single-slider p {
-    font-size: 13px;
+    font-size: 16px;
     width: 80%;
+    line-height: 1.8;
+    color: #4d4c4c;
   }
   .slider .single-slider .button {
     width: 76%;

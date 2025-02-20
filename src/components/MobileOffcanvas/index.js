@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Offcanvas } from "react-bootstrap";
 
-import Logo from "../../../public/img/logo_mgo.svg";
+import Logo from "../../../public/img/logo_mgo.png";
 
 export default function MobileOffcanvas() {
   const pathname = usePathname()
