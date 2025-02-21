@@ -561,6 +561,7 @@ Preloader and SectionLoader Area CSS
   font-size: 15px;
   color: #888;
   margin-top: 15px;
+  line-height: 1.8;
 }
 /* Overlay */
 .overlay {

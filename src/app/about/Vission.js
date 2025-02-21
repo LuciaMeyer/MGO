@@ -12,13 +12,13 @@ export default function Vission() {
     },
     {
       id: "item2",
-      icon: "icofont-tick-mark",
+      icon: "icofont-eye",
       title: "Nuestra Visión",
       desc: "Ser un consultorio de referencia en odontología, reconocido por nuestra calidad, innovación y trato humano.",
     },
     {
       id: "item3",
-      icon: "icofont-tick-mark",
+      icon: "icofont-heart",
       title: "Nuestros Valores",
       desc: "Compromiso, ética, calidad, confianza y calidez en cada atención.",
     },

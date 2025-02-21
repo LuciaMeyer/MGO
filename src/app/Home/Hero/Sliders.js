@@ -18,7 +18,7 @@ export default function Sliders(props) {
       title:
       "Excelencia en <span>Odontología</span>",
       subTitle:
-        "Nos enfocamos en brindarte atención personalizada <br/>con profesionales altamente capacitados, asegurando<br/> tratamientos efectivos para tu salud dental. ",
+        "Nos enfocamos en brindarte atención personalizada con profesionales altamente capacitados, asegurando tratamientos efectivos para tu salud dental.",
       button: {
         text: "Conocenos",
         link: "/about",
@@ -30,7 +30,7 @@ export default function Sliders(props) {
       title:
       "Expertos en cada <span>Especialidad</span>",
       subTitle:
-        "Contamos con un equipo de expertos en odontología, <br/>comprometidos con la excelencia el bienestar de <br/>nuestros pacientes y un servicio personalizado.",
+        "Contamos con un equipo de expertos en odontología, comprometidos con la excelencia el bienestar de nuestros pacientes y un servicio personalizado.",
       button: {
         text: "Profesionales",
         link: "/doctors",
@@ -42,7 +42,7 @@ export default function Sliders(props) {
       title:
       "Tratamientos de <span>Calidad</span><br/>",
       subTitle:
-        "Desde limpiezas preventivas hasta tratamientos avanzados,<br/>nuestro equipo experto ofrece cuidado dental completo. ",
+        "Desde limpiezas preventivas hasta tratamientos avanzados, nuestro equipo experto ofrece cuidado dental completo.",
       button: {
         text: "Tratamientos",
         link: "/service",

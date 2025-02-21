@@ -1,5 +1,6 @@
 /* iPad Screen */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+
   .header .nav li a {
     padding: 0;
     padding: 25px 5px !important;
@@ -14,7 +15,11 @@
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   /* Header Sticky */
   .slider .s3 {
-    background-position: -50rem;
+    background-position: right;
+  }
+  .slider .single-slider p {
+    width: 80%;
+    font-weight: 500;
   }
   .section {
     padding: 70px 0px;
@@ -28,7 +33,8 @@
     margin-bottom: 12px;
   }
   .section-title p {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.8;
   }
   .btn {
     padding: 11px 20px;
@@ -385,11 +391,17 @@
 }
 /* Mobile Screen */
 @media only screen and (max-width: 767px) {
+  .services .single-service p {
+    font-size: 15px;
+    line-height: 1.8;
+    width: 90%;
+  }
   .slider .s3 {
-    background-position: -50rem;
+    background-position: right;
   }
   .slider .single-slider p {
-    width: 80%;
+    width: 90%;
+    font-weight: 500;
   }
   .header.sticky .header-bottom {
     position: absolute;
@@ -552,7 +564,8 @@
     margin-bottom: 10px;
   }
   .section-title p {
-    font-size: 13px;
+    font-size: 15px;
+    line-height: 1.8;
   }
 
   .breadcrumbs {
@@ -1064,7 +1077,8 @@
     margin-bottom: 10px;
   }
   .section-title p {
-    font-size: 13px;
+    font-size: 15px;
+    line-height: 1.8;
   }
   .btn {
     padding: 11px 20px;
@@ -1121,7 +1135,7 @@
     font-size: 16px;
     width: 80%;
     line-height: 1.8;
-    color: #4d4c4c;
+    font-weight: 500;
   }
   .slider .single-slider .button {
     width: 76%;
