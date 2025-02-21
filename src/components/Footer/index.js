@@ -7,6 +7,7 @@ import Link from "next/link";
 
 export default function Footer() {
   const linkedin = 'https://www.linkedin.com/in/lucia-meyer-65633a143/'
+  const currentYear = new Date().getFullYear()
   return (
     <>
       <footer id="footer" className="footer">
@@ -25,7 +26,7 @@ export default function Footer() {
         <div className="copyright">
           <div className="copyright-content">
             <Link href={linkedin} target="_blank" rel="noopener noreferrer">
-              <span> © Lucía Meyer 2025</span>
+              <span> © LM Dev & Design - {currentYear}</span>
             </Link>
           </div>
         </div>

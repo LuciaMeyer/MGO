@@ -1146,7 +1146,7 @@
   }
   .slider .single-slider .button .btn {
     margin: 0;
-    width: 100%;
+    /* width: 100%; */
     margin-bottom: 10px;
   }
   .slider .single-slider .button .btn:last-child {
@@ -1344,9 +1344,15 @@
   .footer .footer-top {
     padding: 65px 0px;
   }
-  .slider .swiper-button-next,
-  .slider .swiper-button-prev {
-    display: none;
+  .slider .swiper-button-prev,
+  .slider .swiper-button-next  {
+    color: var(--primary-color);
+    background: none;
+  }
+  .slider .swiper-button-next:hover,
+  .slider .swiper-button-prev:hover {
+    background: none;
+    color: var(--primary-color)
   }
   .testimonials .single-testimonial {
     width: 252px !important;

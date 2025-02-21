@@ -55,8 +55,8 @@ export default function Sliders(props) {
       {/* <!-- Slider Area --> */}
       <section className={sectionName ? sectionName : "slider"}>
         <Swiper
-          // autoplay={{ delay: 7000 }}
-          // modules={[Navigation, Autoplay]}
+          autoplay={{ delay: 7000 }}
+          modules={[Navigation, Autoplay]}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
