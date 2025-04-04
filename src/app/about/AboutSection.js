@@ -16,7 +16,7 @@ export default function AboutSection() {
                 <br/><br/>Nuestra historia comienza con la <span>Odontóloga y Psicóloga Delcia Bureau</span>, quien dedicó
                 <span> más de 50 años</span> a la profesión con un enfoque especializado en odontopediatría.
                 Su pasión y compromiso sentaron las bases de nuestra filosofía de atención.
-                <br/><br/>Siguiendo su legado, la <span>odontóloga. Florencia Meyer</span> se formó en odontopediatría
+                <br/><br/>Siguiendo su legado, la <span>Odontóloga Florencia Meyer</span> se formó en odontopediatría
                 bajo su guía y luego se especializó en ortodoncia y ortopedia funcional de los maxilares. Con el tiempo, junto al
                 <span> Odontólogo Mariano Gulisano</span>, especialista en prótesis dentobucomaxilar e implantes y docente de la
                 Universidad Nacional de Rosario, fundaron<span className="fw-bold"> Meyer Gulisano Odontología</span>, consolidando una visión de excelencia y atención integral.

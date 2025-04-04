@@ -1,0 +1,13 @@
+main = ".open-next/worker.js"
+name = "meyergulisano"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+assets = { directory = ".open-next/assets", binding = "ASSETS" }
+
+[[kv_namespaces]]
+binding = "NEXT_CACHE_WORKERS_KV"
+id = "2a8b63c4fc9b42f286e39042f9f2cfe0"
+
+[[workers.dev]]
+domain = "meyergulisano.com.ar"
+worker = "meyergulisano"

@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:worker": "opennextjs-cloudflare",
+    "dev:worker": "wrangler dev --port 8771",
+    "preview:worker": "npm run build:worker && npm run dev:worker",
+    "deploy:worker": "npm run build:worker && wrangler deploy"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
@@ -24,6 +28,7 @@
     "swiper": "^11.0.6"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^0.5.8",
     "eslint": "^8",
     "eslint-config-next": "14.1.0"
   }
