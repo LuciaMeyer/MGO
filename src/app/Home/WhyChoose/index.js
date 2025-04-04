@@ -1,5 +1,5 @@
 import SectionHead from "@/components/SectionHead";
-import ThemeLogo from "../../../../public/img/logo_mgo.png";
+import ThemeLogo from "../../../../public/img/logo_mgo.webp";
 import Image from "next/image";
 import { url } from "../../../../public/js/assets.js"; 
 

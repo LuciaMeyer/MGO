@@ -2,8 +2,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import TeamCard from "@/components/TeamCard";
 import SectionLoader from "@/components/SectionLoader";
 
-import TeamImg1 from "../../../public/img/team1.png";
-import TeamImg2 from "../../../public/img/team2.png";
+import TeamImg1 from "../../../public/img/team1.webp";
+import TeamImg2 from "../../../public/img/team2.webp";
 
 import Header from "@/components/Header/Header";
 
@@ -28,6 +28,7 @@ export default function Doctors() {
             </div>
             <div className="col-md-6 col-12">
               <TeamCard
+                style={{ maxWith: "1rem" }}
                 tilt="tilt-disable"
                 image={TeamImg2}
                 name="Mariano Gulisano"

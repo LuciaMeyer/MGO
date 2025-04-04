@@ -9,11 +9,6 @@ export default function NotFound() {
                 <h1>
                   404<span>Ups!No pudimos encontrar lo que estás buscando</span>
                 </h1>
-                <p>
-                  Aenean eget sollicitudin lorem, et pretium felis. Nullam
-                  euismod diam libero, sed dapibus leo laoreet ut. Suspendisse
-                  potenti. Phasellus urna lacus
-                </p>
               </div>
             </div>
           </div>

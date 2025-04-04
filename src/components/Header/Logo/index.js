@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Theme Logo
-import ThemeLogo from "../../../../public/img/logo_mgo.png";
+import ThemeLogo from "../../../../public/img/logo_mgo.webp";
 
 export default function Logo() {
   return (

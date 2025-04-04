@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 
-import Slice1 from "../../../../public/img/slice-1.png";
-import Slice2 from "../../../../public/img/slice-2.png";
-import Slice3 from "../../../../public/img/slice-3.png";
+import Slice1 from "../../../../public/img/slice-1.webp";
+import Slice2 from "../../../../public/img/slice-2.webp";
+import Slice3 from "../../../../public/img/slice-3.webp";
 
 export default function Sliders(props) {
   const { sectionName } = props;

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import SectionImg from "../../../public/img/section-img.png";
+import SectionImg from "../../../public/img/section-img.webp";
 
 export default function SectionHead(props) {
   const { title, img, desc } = props;

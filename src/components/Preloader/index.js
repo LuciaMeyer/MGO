@@ -24,7 +24,7 @@ export default function Preloader() {
         <div className="loader-inner"></div>
         <div className="indicator">
           <Image
-            src="/img/section-img-blanco.png"
+            src="/img/section-img-blanco.webp"
             alt="Loading..."
             width={25}
             height={25}

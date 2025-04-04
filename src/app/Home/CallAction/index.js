@@ -1,5 +1,5 @@
 import Link from "next/link"
-import SectionImg from "../../../../public/img/section-img-blanco.png"
+import SectionImg from "../../../../public/img/section-img-blanco.webp"
 import Image from "next/image";
 
 export default function CallAction() {

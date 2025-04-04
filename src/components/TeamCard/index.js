@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Tilt } from "react-tilt";
-import TeamImg1 from "../../../public/img/team1.png";
+import TeamImg1 from "../../../public/img/team1.webp";
 
 const defaultOptions = {
   reverse: false, // reverse the tilt direction
@@ -44,4 +44,5 @@ export default function TeamCard(props) {
       </Tilt>
     </>
   );
+  
 }

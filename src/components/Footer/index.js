@@ -1,7 +1,7 @@
 import OpenHour from "./OpenHour"
 import OpenHour2 from "./OpenHour2"
 import Links from "./Links"
-import Logo from "../../../public/img/logo-blanco.png"
+import Logo from "../../../public/img/logo-blanco.webp"
 import Image from "next/image";
 import Link from "next/link";
 
