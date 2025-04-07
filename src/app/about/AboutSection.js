@@ -20,7 +20,7 @@ export default function AboutSection() {
                 bajo su guía y luego se especializó en ortodoncia y ortopedia funcional de los maxilares. Con el tiempo, junto al
                 <span> Odontólogo Mariano Gulisano</span>, especialista en prótesis dentobucomaxilar e implantes y docente de la
                 Universidad Nacional de Rosario, fundaron<span className="fw-bold"> Meyer Gulisano Odontología</span>, consolidando una visión de excelencia y atención integral.
-                <br/><br/>Hoy en día, trabajamos junto a un equipo de profesionales especializados en diversas áreas de la odontología, lo que nos permite abordar cada caso de manera integral y personalizada. De esta forma, ofrecemos soluciones adaptadas a las necesidades de cada paciente, garantizando la mejor experiencia y la más alta calidad en cada tratamiento.
+                <br/><br/>Hoy en día, trabajan junto a un equipo de profesionales especializados en diversas áreas de la odontología, lo que permite abordar cada caso de manera integral y personalizada. De esta forma, MGO ofrece soluciones adaptadas a las necesidades de cada paciente, garantizando la mejor experiencia y la más alta calidad en cada tratamiento.
                 </p>
               </div>
             </div>
