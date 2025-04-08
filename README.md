@@ -1,7 +1,7 @@
 
 ## MGO ) Odontología
 
-[Web](https://meyergulisano-odontologia.vercel.app/)
+[meyergulisano.com.ar](https://meyergulisano.com.ar/)
 
 <a href="https://meyergulisano-odontologia.vercel.app/" target="_blank">
   <img src="https://res.cloudinary.com/dw272kava/image/upload/v1740153667/Projects/mgo_rqzvlv.png" alt="LM Dev & Design" style="width: 50%;">
@@ -19,19 +19,17 @@ Las secciones principales del sitio son:
 - **Sobre Nosotros**
 - **Contacto**
 
-### Lenguaje
-
+### Stack de Desarrollo
 - **JavaScript**
-
-### Tecnologías Utilizadas
-
 - **React.js** – Biblioteca de JavaScript popular para construir interfaces de usuario.
 - **Next.js 14** – Framework de React flexible para aplicaciones web rápidas y escalables.
 - **Bootstrap 5.x** – Framework responsivo para desarrollo web mobile-first.
-
-### Librerías y Componentes
 - **React CountUp** – Contadores animados para valores numéricos.
 - **React Swiper** – Sliders y carruseles táctiles.
+- **Custom domain en NIC.ar**
+- **Cloudflare Workers**
+- **Google Business Profile**
+- **Google Ads**
 
 ### Otras Características
 - **Interfaz táctil amigable** – Navegación fluida en dispositivos móviles.
