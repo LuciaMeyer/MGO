@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import Icon from "@/components/Icon";
+
 export default function Links() {
   return (
     <>
@@ -9,27 +11,27 @@ export default function Links() {
             <ul>
               <li>
                 <Link href="/">
-                  <i className="fa fa-caret-right" aria-hidden="true"></i>Inicio
+                  <Icon className="fa fa-caret-right" aria-hidden="true" />Inicio
                 </Link>
               </li>
               <li>
                 <Link href="/doctors">
-                  <i className="fa fa-caret-right" aria-hidden="true"></i>Profesionales
+                  <Icon className="fa fa-caret-right" aria-hidden="true" />Profesionales
                 </Link>
               </li>
               <li>
                 <Link href="/service">
-                  <i className="fa fa-caret-right" aria-hidden="true"></i>Tratamientos
+                  <Icon className="fa fa-caret-right" aria-hidden="true" />Tratamientos
                 </Link>
               </li>
               <li>
                 <Link href="/about">
-                  <i className="fa fa-caret-right" aria-hidden="true"></i>Sobre Nosotros
+                  <Icon className="fa fa-caret-right" aria-hidden="true" />Sobre Nosotros
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
-                  <i className="fa fa-caret-right" aria-hidden="true"></i>Contacto
+                  <Icon className="fa fa-caret-right" aria-hidden="true" />Contacto
                 </Link>
               </li>
             </ul>

@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+import Icon from "@/components/Icon";
+
 export default function ScrollTop() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -31,7 +33,7 @@ export default function ScrollTop() {
         className={`${"scrollUp"} ${isVisible ? "visible" : ""}`}
         onClick={scrollToTop}
       >
-        <i className="fa fa-angle-up"></i>
+        <Icon className="fa fa-angle-up" />
       </div>
     </>
   );

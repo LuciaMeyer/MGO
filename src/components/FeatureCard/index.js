@@ -1,3 +1,5 @@
+import Icon from "@/components/Icon";
+
 export default function FeatureCard(props) {
   const { cardClass, icon, title, desc } = props;
 
@@ -5,7 +7,7 @@ export default function FeatureCard(props) {
     <>
       <div className={cardClass ? cardClass : "single-features"}>
         <div className="signle-icon">
-          <i className={icon ? icon : "icofont icofont-ambulance-cross"}></i>
+          <Icon className={icon ? icon : "icofont icofont-ambulance-cross"} />
         </div>
         <h3>{title ? title : "Emergency Help"}</h3>
         <p>

@@ -1,16 +1,17 @@
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TeamCard from "@/components/TeamCard";
-import SectionLoader from "@/components/SectionLoader";
 
 import TeamImg1 from "../../../public/img/team1.webp";
 import TeamImg2 from "../../../public/img/team2.webp";
 
 import Header from "@/components/Header/Header";
+import { metadataDe } from "@/data/seo";
+
+export const metadata = metadataDe("doctors");
 
 export default function Doctors() {
   return (
     <>
-      <SectionLoader />
       <Header />
 
       <Breadcrumbs title="Conocenos" menuText="Profesionales" />

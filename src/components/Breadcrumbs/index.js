@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Icon from "@/components/Icon";
 
 export default function Breadcrumbs(props) {
   const { title, menuText } = props;
@@ -16,7 +17,7 @@ export default function Breadcrumbs(props) {
                     <Link href="/">Inicio</Link>
                   </li>
                   <li>
-                    <i className="icofont-simple-right"></i>
+                    <Icon className="icofont-simple-right" />
                   </li>
                   <li className="active">{menuText ? menuText : "Doctors"}</li>
                 </ul>

@@ -1,0 +1,33 @@
+/*--------------------------------------------------------------
+# Animaciones
+# El CSS del sitio usa estos dos keyframes por nombre, sin usar ninguna clase
+# de animate.css. Venían de esa dependencia; están copiados acá tal cual para
+# no volver a cargar 90 KB por dos animaciones.
+#
+# Los usa el texto del slider del home:
+#   .slider .swiper-slide-active.single-slider h1     → fadeInUp
+#   .slider .swiper-slide-active.single-slider p      → fadeInUp
+#   .slider .swiper-slide-active.single-slider .button → fadeInDown
+--------------------------------------------------------------*/
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

@@ -1,0 +1,71 @@
+/*--------------------------------------------------------------
+# Iconos
+# Reemplaza a font-awesome.min.css e icofont.css (145 KB) y a las 10 fuentes
+# de public/fonts (6,5 MB). Replica solo las reglas de caja que esas hojas
+# aportaban, para que el resto del CSS del sitio siga funcionando sin cambios.
+--------------------------------------------------------------*/
+
+.fa {
+  display: inline-block;
+  font-size: inherit;
+  line-height: 1;
+}
+
+[class*=" icofont-"],
+[class^="icofont-"] {
+  font-style: normal;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* El SVG ocupa un cuadrado de 1em, de modo que el font-size que el CSS del
+   sitio ya aplicaba a cada <i> sigue controlando el tamaño del icono. */
+.fa > svg,
+[class*=" icofont-"] > svg,
+[class^="icofont-"] > svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+/* Los glifos vienen dibujados en la caja em completa, de la que un tramo
+   queda por debajo de la linea de base: ese tramo es el descenso de cada
+   fuente (256/1792 en FontAwesome, 150/1000 en IcoFont). Compensarlo deja el
+   icono apoyado en la linea de base igual que antes. */
+.fa > svg {
+  vertical-align: -0.1429em;
+}
+
+[class*=" icofont-"] > svg,
+[class^="icofont-"] > svg {
+  vertical-align: -0.15em;
+}
+
+/* Unico modificador de FontAwesome que usa el sitio: el engranaje giratorio
+   del selector de colores. */
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}

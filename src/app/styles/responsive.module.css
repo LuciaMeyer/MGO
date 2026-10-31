@@ -310,7 +310,7 @@
   .newsletter .subscribe-form {
     text-align: center;
   }
-  .contact-us #myMap {
+  .contact-us .map-embed {
     height: 400px;
   }
   .contact-us .contact-us-form h2 {
@@ -929,7 +929,7 @@
   .our-mission-image {
     height: 300px;
   }
-  .contact-us #myMap {
+  .contact-us .map-embed {
     height: 300px;
   }
   .contact-us .contact-us-form h2 {

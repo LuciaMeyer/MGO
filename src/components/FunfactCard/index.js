@@ -1,6 +1,7 @@
 "use client";
 
 import CountUp from "react-countup";
+import Icon from "@/components/Icon";
 
 export default function FunfactCard(props) {
   const { icon, number, desc } = props;
@@ -8,7 +9,7 @@ export default function FunfactCard(props) {
   return (
     <>
       <div className="single-fun">
-        <i className={icon ? icon : "icofont icofont-home"}></i>
+        <Icon className={icon ? icon : "icofont icofont-home"} />
         <div className="content">
           <span className="counter">
             <CountUp end={number ? number : "3468"} delay={1} enableScrollSpy />

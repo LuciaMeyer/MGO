@@ -7,6 +7,9 @@ import Schedule from "./Home/Schedule";
 import Services from "./Home/Services";
 // import Testimonial from "./Home/Testimonials";
 import WhyChoose from "./Home/WhyChoose";
+import { metadataDe } from "@/data/seo";
+
+export const metadata = metadataDe("home");
 
 export default function Home() {
   return (

@@ -548,18 +548,36 @@ body {
 }
 
 /* Slider Arrow */
+/* Antes el chevron salía de la fuente FontAwesome (content: "\f104" y
+   "\f105"). Ahora es el mismo trazado de esa fuente, puesto como máscara, con
+   el color tomado de currentColor: así sigue siendo blanco y acompaña el
+   cambio de color en hover igual que cuando era texto. */
 .slider .swiper-button-next:after,
 .slider .swiper-button-prev:after {
-  font-family: FontAwesome;
+  content: "";
+  display: block;
+  /* En em para que las reglas de responsive, que achican estas flechas
+     bajándoles el font-size a 24px, sigan controlando el tamaño. */
   font-size: 26px;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
 .slider .swiper-button-prev:after,
 .slider .swiper-rtl .swiper-button-next:after {
-  content: "\f104";
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 1792'%3E%3Cg transform='translate(0 1536) scale(1 -1)'%3E%3Cpath d='M627 992q0 -13 -10 -23l-393 -393l393 -393q10 -10 10 -23t-10 -23l-50 -50q-10 -10 -23 -10t-23 10l-466 466q-10 10 -10 23t10 23l466 466q10 10 23 10t23 -10l50 -50q10 -10 10 -23z'/%3E%3C/g%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 1792'%3E%3Cg transform='translate(0 1536) scale(1 -1)'%3E%3Cpath d='M627 992q0 -13 -10 -23l-393 -393l393 -393q10 -10 10 -23t-10 -23l-50 -50q-10 -10 -23 -10t-23 10l-466 466q-10 10 -10 23t10 23l466 466q10 10 23 10t23 -10l50 -50q10 -10 10 -23z'/%3E%3C/g%3E%3C/svg%3E");
 }
 .slider .swiper-button-next:after,
 .slider .swiper-rtl .swiper-button-prev:after {
-  content: "\f105";
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 1792'%3E%3Cg transform='translate(0 1536) scale(1 -1)'%3E%3Cpath d='M595 576q0 -13 -10 -23l-466 -466q-10 -10 -23 -10t-23 10l-50 50q-10 10 -10 23t10 23l393 393l-393 393q-10 10 -10 23t10 23l50 50q10 10 23 10t23 -10l466 -466q10 -10 10 -23z'/%3E%3C/g%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 1792'%3E%3Cg transform='translate(0 1536) scale(1 -1)'%3E%3Cpath d='M595 576q0 -13 -10 -23l-466 -466q-10 -10 -23 -10t-23 10l-50 50q-10 10 -10 23t10 23l393 393l-393 393q-10 10 -10 23t10 23l50 50q10 10 23 10t23 -10l466 -466q10 -10 10 -23z'/%3E%3C/g%3E%3C/svg%3E");
 }
 .slider .swiper-button-next,
 .slider .swiper-button-prev {
@@ -733,6 +751,16 @@ body {
 .schedule .single-schedule .time-sidual {
   overflow: hidden;
   margin-top: 17px;
+}
+/* Bootstrap le pone padding-left: 2rem a todo ul. El reset de normalize lo
+   anula, pero solo gana por orden de carga, y en dev Next inyecta el CSS en
+   otro orden. Con la clase queda fijo en los dos casos. */
+.time-sidual {
+  padding-left: 0;
+}
+/* Resaltado de las horas: 600 en vez del 700 de <strong>, que es demasiado. */
+.time-sidual b {
+  font-weight: 600;
 }
 .schedule .single-schedule .time-sidual li {
   display: block;
@@ -1796,8 +1824,15 @@ body {
   font-weight: 500;
   color: #2c2d3f;
 }
-.team .t-bottom h2 a:hover {
+/* Los nombres van en el color institucional y pasan a gris oscuro en hover.
+   Sin subrayado: el enlace todavía no lleva a una ficha propia. */
+.team .t-bottom h2 a {
   color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+.team .t-bottom h2 a:hover {
+  color: #2c2d3f;
 }
 /*-- Doctor Details --*/
 .doctor-details-left {
@@ -3365,12 +3400,12 @@ body {
   margin-top: 5px;
 }
 /* Google Map */
-.contact-us #myMap,
-.contact-us #myMap iframe {
+.contact-us .map-embed,
+.contact-us .map-embed iframe {
   height: 100%;
   width: 100%;
 }
-.contact-us #myMap iframe {
+.contact-us .map-embed iframe {
   border-radius: 5px 0px 0px 5px;
 }
 /*=========================
@@ -3645,6 +3680,13 @@ body {
 .about-area {
   position: relative;
   z-index: 1;
+}
+/* Sin el padding-top de .section, para que la imagen quede pegada al
+   encabezado azul. El texto conserva su aire por el padding-top propio de
+   .about-content. Va con las dos clases porque responsive.module.css
+   redefine .section en cada breakpoint y carga después de este archivo. */
+.about-area.section {
+  padding-top: 0;
 }
 .about-image {
   width: 100%;

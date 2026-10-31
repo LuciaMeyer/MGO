@@ -1,10 +1,9 @@
-import SectionHead from "@/components/SectionHead";
 import ThemeLogo from "../../../../public/img/logo_mgo.webp";
 import Image from "next/image";
-import { url } from "../../../../public/js/assets.js"; 
+import LazyVideo from "@/components/LazyVideo";
+import { videoInstitucional } from "@/data/media";
 
-
-import Video from "./Video";
+import Icon from "@/components/Icon";
 
 export default function WhyChoose() {
   return (
@@ -31,20 +30,20 @@ export default function WhyChoose() {
                   <div className="col-lg-6">
                     <ul className="list">
                       <li>
-                        <i className="fa fa-caret-right"></i>Atención Personalizada
+                        <Icon className="fa fa-caret-right" />Atención Personalizada
                       </li>
                       <li>
-                        <i className="fa fa-caret-right"></i>Enfoque Preventivo
+                        <Icon className="fa fa-caret-right" />Enfoque Preventivo
                       </li>
                     </ul>
                   </div>
                   <div className="col-lg-6 mt-lg-0 mt-3">
                     <ul className="list">
                       <li>
-                        <i className="fa fa-caret-right"></i>Tratamientos Innovadores
+                        <Icon className="fa fa-caret-right" />Tratamientos Innovadores
                       </li>
                       <li>
-                        <i className="fa fa-caret-right"></i>Trato Humano y Cercano
+                        <Icon className="fa fa-caret-right" />Trato Humano y Cercano
                       </li>
                     </ul>
                   </div>
@@ -59,9 +58,12 @@ export default function WhyChoose() {
                   <div className="waves wave-3"></div>
                 </div>
               </div>
-              <video width="100%" height="auto" muted controls autoPlay loop>
-                <source src={url.video} type="video/mp4" />
-              </video>
+              <LazyVideo
+                src={videoInstitucional.src}
+                poster={videoInstitucional.poster}
+                width="100%"
+                height="auto"
+              />
             </div>
           </div>
         </div>

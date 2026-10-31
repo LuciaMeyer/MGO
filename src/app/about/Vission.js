@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import Icon from "@/components/Icon";
+
 export default function Vission() {
   const [vissionData, setvissionData] = useState([
     {
@@ -33,7 +35,7 @@ export default function Vission() {
               <div className="col-lg-4 col-md-6 col-12" key={items.id}>
                 <div className="single-vision-box">
                   <div className="icon">
-                    <i className={items.icon}></i>
+                    <Icon className={items.icon} />
                   </div>
                   <h3>{items.title}</h3>
                   <p>{items.desc}</p>

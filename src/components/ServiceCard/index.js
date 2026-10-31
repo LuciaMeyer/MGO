@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Icon from "@/components/Icon";
 
 export default function ServiceCard(props) {
   const { icon, title, desc } = props;
@@ -6,7 +7,7 @@ export default function ServiceCard(props) {
   return (
     <>
       <div className="single-service">
-      <i className={`${icon ? icon : "icofont icofont-prescription"}`}></i>
+      <Icon className={`${icon ? icon : "icofont icofont-prescription"}`} />
         <h4>
           <Link href="/service">
             {title ? title : "General Treatment "}

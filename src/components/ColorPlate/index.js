@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
+import Icon from "@/components/Icon";
+
 export default function ColorPlate() {
   const colors = [
     "#1A76D1",
@@ -39,7 +41,7 @@ export default function ColorPlate() {
     <>
       <div className={`color-plate  ${optionsOpen ? "active" : ""}`}>
         <div className="color-plate-icon" onClick={toggleOptions}>
-          <i className="fa fa-cog fa-spin"></i>
+          <Icon className="fa fa-cog fa-spin" />
         </div>
         {colors.map((color, index) => (
           <ColorOption key={index} color={color} onClick={handleColorClick} />

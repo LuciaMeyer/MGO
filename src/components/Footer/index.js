@@ -1,13 +1,12 @@
-import OpenHour from "./OpenHour"
-import OpenHour2 from "./OpenHour2"
+import SedeHorarios from "./SedeHorarios"
 import Links from "./Links"
 import Logo from "../../../public/img/logo-blanco.webp"
 import Image from "next/image";
 import Link from "next/link";
+import { consultorios } from "@/data/consultorios";
 
 export default function Footer() {
   const linkedin = 'https://www.linkedin.com/in/lucia-meyer-65633a143/'
-  const currentYear = new Date().getFullYear()
   return (
     <>
       <footer id="footer" className="footer">
@@ -15,8 +14,9 @@ export default function Footer() {
           <div className="container">
             <div className="row d-flex justify-content-center">
               <Links />
-              <OpenHour2 />
-              <OpenHour />
+              {consultorios.map((sede) => (
+                <SedeHorarios key={sede.id} sede={sede} />
+              ))}
               <div className="d-flex flex-column justify-content-center align-items-center mt-5">
                 <Image src={Logo} alt="#" width={200} height={50} />
               </div>
@@ -26,7 +26,7 @@ export default function Footer() {
         <div className="copyright">
           <div className="copyright-content">
             <Link href={linkedin} target="_blank" rel="noopener noreferrer">
-              <span> © LM Dev & Design - {currentYear}</span>
+              <span> © LM Dev & Design</span>
             </Link>
           </div>
         </div>

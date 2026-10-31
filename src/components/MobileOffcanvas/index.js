@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Offcanvas } from "react-bootstrap";
+import Icon from "@/components/Icon";
 
 import Logo from "../../../public/img/logo_mgo.webp";
 
@@ -47,7 +48,7 @@ export default function MobileOffcanvas() {
                 </Link>
               </div>
               <button type="button" className="btn-close" onClick={handleClose}>
-                <i className="fa fa-times"></i>
+                <Icon className="fa fa-times" />
               </button>
             </div>
             <div className="mobile-menu-modal-main-body">
