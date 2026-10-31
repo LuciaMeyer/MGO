@@ -233,6 +233,9 @@ body {
   position: relative;
   display: inline-block;
   position: relative;
+  /* Sin el subrayado por defecto del navegador: la única línea del menú es
+     la barra inferior del ::before, que aparece en hover y en la activa. */
+  text-decoration: none;
 }
 .header .nav li a::before {
   position: absolute;

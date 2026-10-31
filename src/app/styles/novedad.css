@@ -1,0 +1,150 @@
+/*--------------------------------------------------------------
+# Modal de novedades
+# Se muestra al entrar al sitio, en cualquier página. El componente está en
+# src/components/Novedad/ y el contenido en src/data/novedad.js.
+--------------------------------------------------------------*/
+
+.novedad-fondo {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(20, 21, 30, 0.55);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  animation: novedad-aparecer 0.25s ease both;
+}
+
+/* El ancho de la tarjeta manda y la imagen lo sigue: así no quedan franjas
+   vacías con el borde redondeado y la sombra alrededor del flyer, y la cruz
+   siempre cae sobre la esquina real de la imagen.
+   El segundo límite traduce "que no pase del 85% del alto de pantalla" a un
+   ancho, usando la proporción 4:3 del flyer de escritorio (85vh x 4/3). */
+.novedad-caja {
+  position: relative;
+  width: 100%;
+  max-width: min(820px, 113vh);
+  animation: novedad-subir 0.3s ease both;
+}
+
+.novedad-imagen {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* Montada sobre el borde superior del flyer: la mitad queda por fuera, así
+   parece una etiqueta apoyada encima. Gris oscuro sobre blanco, igual que la
+   cruz: no cambia con la paleta de colores del sitio. */
+.novedad-etiqueta {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 8px 26px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #2c2d3f;
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.novedad-cerrar {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  /* Gris neutro a propósito: el botón no compite con el logo ni cambia con
+     la paleta de colores del sitio. */
+  background: #888;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+.novedad-cerrar:hover,
+.novedad-cerrar:focus-visible {
+  background: #555;
+}
+
+/* En celular la tarjeta ocupa casi todo el ancho, así que el botón no puede
+   quedar colgando fuera: se mete adentro, sobre la esquina de la imagen. */
+@media only screen and (max-width: 575px) {
+  .novedad-fondo {
+    padding: 16px;
+  }
+  .novedad-cerrar {
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+  /* Acá el flyer es vertical (3:4), así que el tope por alto es otro:
+     80vh x 3/4 = 60vh de ancho. */
+  .novedad-caja {
+    max-width: 60vh;
+  }
+  /* En pantalla chica la píldora blanca pesa demasiado y compite con el
+     flyer, que ya trae su propia etiqueta arriba. Queda solo el texto, en
+     blanco y apoyado entero sobre el fondo oscuro, fuera de la imagen. */
+  .novedad-etiqueta {
+    top: -24px;
+    padding: 0;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    color: #fff;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes novedad-aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes novedad-subir {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .novedad-fondo,
+  .novedad-caja {
+    animation: none;
+  }
+}

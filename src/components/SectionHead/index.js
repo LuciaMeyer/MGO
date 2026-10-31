@@ -11,7 +11,7 @@ export default function SectionHead(props) {
         <h2>
           {title ? title : "Estamos listos para asistirte a vos y a tu familia."}
         </h2>
-        <Image className="mb-4" src={img ? img : SectionImg} alt="#" width={48} height={24} />
+        <Image className="mb-4" src={img ? img : SectionImg} alt="#" width={48} height={22} />
         <p>{desc ? desc : ""}</p>
       </div>
     </>

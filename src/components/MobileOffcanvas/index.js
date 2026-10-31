@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Offcanvas } from "react-bootstrap";
 import Icon from "@/components/Icon";
+import { navegacion } from "@/data/navegacion";
 
 import Logo from "../../../public/img/logo_mgo.webp";
 
@@ -13,18 +14,10 @@ export default function MobileOffcanvas() {
   const pathname = usePathname()
 
   const [show, setShow] = useState(false)
-  const [openSubMenu, setOpenSubMenu] = useState(null)
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
 
-  // Function to toggle the sub-menu
-  const toggleSubMenu = (index) => {
-    setOpenSubMenu(openSubMenu === index ? null : index)
-  };
-
-  // Function to check if a menu item is active
-  const isActive = (path) => pathname === path
   return (
     <>
       <button
@@ -44,7 +37,7 @@ export default function MobileOffcanvas() {
             <div className="modal-header offcanvas-header">
               <div className="offcanvas-logo">
                 <Link href="/">
-                  <Image src={Logo} alt="#" width={134} height={50} />
+                  <Image src={Logo} alt="#" width={134} height={36} />
                 </Link>
               </div>
               <button type="button" className="btn-close" onClick={handleClose}>
@@ -55,52 +48,22 @@ export default function MobileOffcanvas() {
               {/* Offcanvas Menu */}
               <nav id="offcanvas-menu" className="navigation offcanvas-menu">
                 <ul id="nav" className="list-none offcanvas-men-list">
-                  <li>
-                    <Link
-                      className="menu-arrow"
-                      onClick={handleClose}
-                      href="/"
-                    >
-                      Inicio
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="menu-arrow"
-                      onClick={handleClose}
-                      href="/doctors"
-                    >
-                      Profesionales
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="menu-arrow"
-                      onClick={handleClose}
-                      href="/service"
-                    >
-                      Tratamientos
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="menu-arrow"
-                      onClick={handleClose}
-                      href="/about"
-                    >
-                      Sobre Nosotros
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="menu-arrow"
-                      onClick={handleClose}
-                      href="/contact"
-                    >
-                      Contacto
-                    </Link>
-                  </li>
-                  <li></li>
+                  {navegacion.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        className={`menu-arrow${
+                          pathname === item.href ? " active" : ""
+                        }`}
+                        onClick={handleClose}
+                        href={item.href}
+                        aria-current={
+                          pathname === item.href ? "page" : undefined
+                        }
+                      >
+                        {item.texto}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </nav>
             </div>

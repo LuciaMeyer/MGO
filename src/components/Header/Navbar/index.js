@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { navegacion } from "@/data/navegacion";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -11,40 +12,19 @@ export default function Navbar() {
       <div className="main-menu">
         <nav className="navigation">
           <ul className="nav menu">
-            <li>
-              <Link href="/">
-                Inicio
-              </Link>
-              <ul className="dropdown">
-              </ul>
-            </li>
-            <li>
-              <Link href="/doctors">
-                Profesionales
-              </Link>
-              <ul className="dropdown">
-              </ul>
-            </li>
-            <li>
-              <Link href="/service">
-                Tratamientos
-              </Link>
-              <ul className="dropdown">
-              </ul>
-            </li>
-            <li>
-              <Link href="/about">
-                Sobre Nosotros
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={` ${pathname === "/contact" ? "active" : ""}`}
-                href="/contact"
-              >
-                Contacto
-              </Link>
-            </li>
+            {navegacion.map((item) => (
+              <li key={item.href}>
+                {/* La clase active pinta el texto y la barra inferior con el
+                    color institucional. Antes solo la llevaba Contacto. */}
+                <Link
+                  href={item.href}
+                  className={pathname === item.href ? "active" : ""}
+                  aria-current={pathname === item.href ? "page" : undefined}
+                >
+                  {item.texto}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

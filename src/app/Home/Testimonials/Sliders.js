@@ -1,49 +1,11 @@
 "use client";
 
 import Image from "next/image";
-
-import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-
-import TestimonialImg1 from "../../../../public/img/testi1.png";
-import TestimonialImg2 from "../../../../public/img/testi2.png";
-import TestimonialImg3 from "../../../../public/img/testi3.png";
+import { testimonios } from "@/data/testimonios";
 
 export default function Sliders() {
-  const [testimonialSlider, settestimonialSlider] = useState([
-    {
-      id: "t1",
-      img: TestimonialImg1,
-      desc: "Lorem ipsum dolor sit amet consectetur eliet adipiscing. Aliquam nec suscipit turpis, vel pretium eros.",
-      name: "Ruhfayed Sakib",
-    },
-    {
-      id: "t2",
-      img: TestimonialImg2,
-      desc: "Lorem ipsum dolor sit amet consectetur eliet adipiscing. Aliquam nec suscipit turpis, vel pretium eros.",
-      name: "Shakil Hossain",
-    },
-    {
-      id: "t3",
-      img: TestimonialImg3,
-      desc: "Lorem ipsum dolor sit amet consectetur eliet adipiscing. Aliquam nec suscipit turpis, vel pretium eros.",
-      name: "Naimur Rahman",
-    },
-    {
-      id: "t4",
-      img: TestimonialImg2,
-      desc: "Lorem ipsum dolor sit amet consectetur eliet adipiscing. Aliquam nec suscipit turpis, vel pretium eros.",
-      name: "Shakil Hossain",
-    },
-    {
-      id: "t5",
-      img: TestimonialImg3,
-      desc: "Lorem ipsum dolor sit amet consectetur eliet adipiscing. Aliquam nec suscipit turpis, vel pretium eros.",
-      name: "Naimur Rahman",
-    },
-  ]);
-
   return (
     <>
       <Swiper
@@ -76,11 +38,18 @@ export default function Sliders() {
           },
         }}
       >
-        {testimonialSlider.map((singleSlider) => (
-          <SwiperSlide className="single-testimonial" key={singleSlider.id}>
-            <Image src={singleSlider.img} alt="#" width={53} height={53} />
-            <p>{singleSlider.desc}</p>
-            <h4 className="name">{singleSlider.name}</h4>
+        {testimonios.map((testimonio) => (
+          <SwiperSlide className="single-testimonial" key={testimonio.id}>
+            {testimonio.foto && (
+              <Image
+                src={testimonio.foto}
+                alt={testimonio.nombre}
+                width={53}
+                height={53}
+              />
+            )}
+            <p>{testimonio.texto}</p>
+            <h4 className="name">{testimonio.nombre}</h4>
           </SwiperSlide>
         ))}
       </Swiper>

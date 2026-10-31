@@ -18,7 +18,7 @@ export default function Footer() {
                 <SedeHorarios key={sede.id} sede={sede} />
               ))}
               <div className="d-flex flex-column justify-content-center align-items-center mt-5">
-                <Image src={Logo} alt="#" width={200} height={50} />
+                <Image src={Logo} alt="#" width={200} height={58} />
               </div>
             </div>
           </div>

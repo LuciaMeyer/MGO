@@ -5,7 +5,7 @@ import Funfact from "./Home/Funfact";
 import Hero from "./Home/Hero";
 import Schedule from "./Home/Schedule";
 import Services from "./Home/Services";
-// import Testimonial from "./Home/Testimonials";
+import Testimonial from "./Home/Testimonials";
 import WhyChoose from "./Home/WhyChoose";
 import { metadataDe } from "@/data/seo";
 
@@ -22,7 +22,8 @@ export default function Home() {
       <WhyChoose />
       <CallAction />
       <Services />
-      {/* <Testimonial /> */}
+      {/* No muestra nada mientras src/data/testimonios.js esté vacío. */}
+      <Testimonial />
     </>
   );
 }

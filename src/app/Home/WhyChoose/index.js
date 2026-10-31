@@ -12,7 +12,7 @@ export default function WhyChoose() {
         <div className="container" >
           <div className="row">
             <div className="d-flex flex-column justify-content-center align-items-center pb-5 mb-5" style={{height: "30vh"}}>
-              <Image src={ThemeLogo} alt="#" width={300} height={100} />
+              <Image src={ThemeLogo} alt="#" width={300} height={80} />
             </div>
           </div>
           <div className="row">

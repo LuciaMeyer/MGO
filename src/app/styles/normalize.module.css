@@ -1315,6 +1315,7 @@ object {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-decoration: none;
 }
 
 .mobile-menu-modal .offcanvas-menu li a:hover,

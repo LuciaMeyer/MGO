@@ -1,8 +1,9 @@
 import SloganSection from "@/components/SloganSection";
 import Footer from "@/components/Footer";
 import ScrollTop from "@/components/ScrollTop";
-import ColorPlate from "@/components/ColorPlate";
+// import ColorPlate from "@/components/ColorPlate";
 import Preloader from "@/components/Preloader";
+import Novedad from "@/components/Novedad";
 import JsonLd from "@/components/JsonLd";
 import { sitio } from "@/data/sitio";
 import { Poppins } from "next/font/google";
@@ -55,7 +56,8 @@ export default function RootLayout({ children }) {
         <>
           <JsonLd />
           <Preloader />
-          <ColorPlate />
+          <Novedad />
+          {/* <ColorPlate /> */}
           <main>{children}</main>
           <SloganSection />
           <Footer />

@@ -27,7 +27,7 @@ export default function Preloader() {
             src="/img/section-img-blanco.webp"
             alt="Loading..."
             width={25}
-            height={25}
+            height={11}
             priority
             // style={{ transform: "rotate(-90deg)" }}
           />

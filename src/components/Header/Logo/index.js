@@ -9,7 +9,7 @@ export default function Logo() {
     <>
       <div className="logo" >
         <Link href="/">
-          <Image src={ThemeLogo} alt="#" width={220} height={100} />
+          <Image src={ThemeLogo} alt="#" width={220} height={58} />
         </Link>
       </div>
     </>

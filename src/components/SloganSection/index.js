@@ -12,7 +12,7 @@ export default function SloganSection() {
             <h5 style={{ opacity: "0.7" }}>
               Más que odontología, <br/> un compromiso con tu bienestar y tu sonrisa.
             </h5>
-            <Image className="mt-5" src={img} alt="#" width={200} height={100} />
+            <Image className="mt-5" src={img} alt="#" width={200} height={53} />
           </div>
         </>
   );
