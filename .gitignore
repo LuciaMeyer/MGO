@@ -41,3 +41,7 @@ next-env.d.ts
 
 # builds de verificacion
 /.next-verify/
+
+# claude code: ajustes de esta maquina y archivos temporales
+.claude/settings.local.json
+.claude/**/*.tmp.*
