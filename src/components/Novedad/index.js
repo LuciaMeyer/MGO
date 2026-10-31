@@ -9,6 +9,12 @@ import { novedad } from "@/data/novedad";
 // id en src/data/novedad.js la clave cambia y el modal vuelve a aparecer.
 const clave = (id) => `mgo-novedad-${id}`;
 
+// Marca que la novedad ya se mostró en esta carga del sitio. Al vivir en el
+// módulo y no en el componente, sobrevive a que React vuelva a montar el
+// modal al cambiar de ruta, y en cambio se reinicia sola cuando el navegador
+// carga el documento de nuevo: entrar por primera vez o refrescar.
+let yaMostrada = false;
+
 // Mismo corte que usa novedad.css para el botón de cerrar.
 const CONSULTA_MOBILE = "(max-width: 575px)";
 
@@ -28,7 +34,8 @@ export default function Novedad() {
   }, []);
 
   useEffect(() => {
-    if (!novedad.activa) return;
+    if (!novedad.activa || yaMostrada) return;
+    yaMostrada = true;
 
     if (novedad.frecuencia === "siempre") {
       setAbierto(true);

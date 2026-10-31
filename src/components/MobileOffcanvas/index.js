@@ -36,7 +36,7 @@ export default function MobileOffcanvas() {
           <div className="modal-content">
             <div className="modal-header offcanvas-header">
               <div className="offcanvas-logo">
-                <Link href="/">
+                <Link href="/" onClick={handleClose}>
                   <Image src={Logo} alt="#" width={134} height={36} />
                 </Link>
               </div>

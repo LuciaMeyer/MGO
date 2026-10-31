@@ -28,7 +28,8 @@ import imagenMobile from "../../public/img/novedad-mobile.webp";
 export const novedad = {
   activa: true,
 
-  // "siempre"  → se abre en cada carga de página, también al refrescar.
+  // "siempre"  → se abre al entrar al sitio y en cada refresh. Moverse entre
+  //              secciones con el menú no la vuelve a abrir.
   // "una-vez"  → a cada persona se le muestra una sola vez, hasta que
   //              cambies el `id` de abajo; ahí vuelve a aparecerle a todos.
   frecuencia: "siempre",

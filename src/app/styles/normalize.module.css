@@ -1186,6 +1186,14 @@ object {
 .mobile-menu-modal {
   z-index: 9999999;
 }
+/* Bootstrap le da 400px de ancho al offcanvas y lo fija con dos clases
+   (.offcanvas.offcanvas-start), así que hace falta una tercera para ganarle
+   sin depender del orden en que se carguen las hojas. El alto ya sale entero
+   del top:0 / bottom:0 que pone Bootstrap. */
+.mobile-menu-modal.offcanvas.offcanvas-start {
+  width: 100%;
+  max-width: 100%;
+}
 .mobile-menu-modal .offcanvas-logo img {
   width: 200px;
   height: 100px;
@@ -1223,8 +1231,11 @@ object {
 }
 .mobile-menu-modal-main-body {
   padding: 24px 20px;
-  overflow-y: scroll;
-  height: 480px;
+  /* Toma todo el alto que sobra debajo del encabezado en lugar de cortar en
+     un alto fijo, y scrollea solo si el menú no entra. */
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
 }
 .mobile-menu-modal.offcanvas-modal.modal.fade .modal-dialog {
   transform: translateX(-100%);
