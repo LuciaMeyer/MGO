@@ -11,9 +11,31 @@ const clave = (id) => `mgo-novedad-${id}`;
 
 // Marca que la novedad ya se mostró en esta carga del sitio. Al vivir en el
 // módulo y no en el componente, sobrevive a que React vuelva a montar el
-// modal al cambiar de ruta, y en cambio se reinicia sola cuando el navegador
-// carga el documento de nuevo: entrar por primera vez o refrescar.
+// modal al cambiar de ruta.
 let yaMostrada = false;
+
+// Marca que ya se mostró en esta pestaña. Hace falta además de la de arriba
+// porque la variable de módulo se pierde si la navegación llega a recargar el
+// documento, y ahí la novedad volvía a aparecer al moverse por el sitio.
+const CLAVE_SESION = "mgo-novedad-sesion";
+
+// Debe aparecer al entrar por primera vez y al refrescar, no al navegar.
+// Refrescar se reconoce por el tipo de navegación del documento; entrar por
+// primera vez, porque todavía no hay marca en la pestaña.
+function esCargaQueCorresponde() {
+  try {
+    if (performance.getEntriesByType("navigation")[0]?.type === "reload") {
+      return true;
+    }
+  } catch {}
+
+  try {
+    return window.sessionStorage.getItem(CLAVE_SESION) !== "1";
+  } catch {
+    // Sin sessionStorage no se puede distinguir: se muestra.
+    return true;
+  }
+}
 
 // Mismo corte que usa novedad.css para el botón de cerrar.
 const CONSULTA_MOBILE = "(max-width: 575px)";
@@ -36,6 +58,12 @@ export default function Novedad() {
   useEffect(() => {
     if (!novedad.activa || yaMostrada) return;
     yaMostrada = true;
+
+    if (!esCargaQueCorresponde()) return;
+
+    try {
+      window.sessionStorage.setItem(CLAVE_SESION, "1");
+    } catch {}
 
     if (novedad.frecuencia === "siempre") {
       setAbierto(true);

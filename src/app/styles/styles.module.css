@@ -1274,13 +1274,15 @@ body {
   margin-bottom: 25px;
   color: #2c2d3f;
 }
+/* Mismo criterio que los nombres de los profesionales: azul institucional de
+   base y gris oscuro al pasar el mouse. */
 .services .single-service h4 a {
-  color: #2c2d3f;
+  color: var(--primary-color);
   font-size: 20px;
   font-weight: 600;
 }
 .services .single-service h4 a:hover {
-  color: var(--primary-color);
+  color: #2c2d3f;
 }
 .services .single-service p {
   color: #868686;
@@ -4164,6 +4166,17 @@ body {
   font-weight: 400;
   display: inline-block;
   margin-left: 4px;
+}
+/* El crédito de LM Dev & Design va sobre fondo blanco y tiene que pasar
+   desapercibido: gris claro, sin subrayado y sin el azul de enlace que le
+   ponía Bootstrap. */
+.footer .copyright .copyright-content a {
+  color: #999;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+.footer .copyright .copyright-content a:hover {
+  color: #666;
 }
 /*=========================
 	End Footer CSS

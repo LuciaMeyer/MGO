@@ -811,6 +811,14 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
+/* Bootstrap trae `a { text-decoration: underline }` con la misma
+   especificidad que la regla del sitio, así que gana el archivo que se cargue
+   último y los enlaces aparecían subrayados. El `html` de adelante sube la
+   especificidad y deja el diseño original sin depender del orden de carga. */
+html a {
+  text-decoration: none;
+}
+
 a {
   color: inherit;
 }
